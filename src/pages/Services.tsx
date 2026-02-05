@@ -1,14 +1,21 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+
+const itemUp: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" as const }, // ✅
+  },
+};
 
 const container = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 };
-const itemUp = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-};
+ 
 
 const services = [
   {
@@ -140,10 +147,8 @@ export default function Services() {
               variants={itemUp}
               whileHover={{ y: -4 }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
-              className={[
-                "rounded-3xl border border-slate-200 bg-white p-6 shadow-sm",
-                s.highlight ? "ring-1 ring-slate-900/10" : "",
-              ].join(" ")}
+              className= "rounded-3xl border border-slate-200 bg-white p-6 shadow-sm" 
+                
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
