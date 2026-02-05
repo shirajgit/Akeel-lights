@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HeroSlider from "../components/HeroSlider";
+import type { Variants } from "framer-motion";
+
+const itemUp: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" as const }, // ✅
+  },
+};
+
 
 const stats = [
   { label: "Events Covered", value: "250+" },
@@ -106,16 +117,9 @@ const container = {
   },
 };
 
-const itemUp = {
-  hidden: { opacity: 0, y: 14 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-};
+ 
 
-const fadeIn = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
+ 
 function Section({
   id,
   children,
@@ -129,7 +133,7 @@ function Section({
     <motion.section
       id={id}
       className={className}
-      variants={fadeIn}
+    
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
@@ -352,10 +356,9 @@ export default function Home() {
                 variants={itemUp}
                 whileHover={{ y: -4 }}
                 transition={{ type: "spring", stiffness: 260, damping: 22 }}
-                className={[
-                  "rounded-3xl border border-slate-200 bg-white p-6 shadow-sm",
-                  s.highlight ? "ring-1 ring-slate-900/10" : "",
-                ].join(" ")}
+                className= 
+                  "rounded-3xl border border-slate-200 bg-white p-6 shadow-sm" 
+                  
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
