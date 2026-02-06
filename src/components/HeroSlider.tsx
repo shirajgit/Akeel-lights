@@ -9,7 +9,7 @@ type Slide = {
 
 export default function HeroSlider({
   slides,
-  interval = 5000,
+  interval = 8000,
   className = "",
 }: {
   slides: Slide[];
@@ -40,7 +40,7 @@ export default function HeroSlider({
           key={active.src}
           src={active.src}
           alt={active.title || "Slide"}
-          className="h-[520px] w-full object-cover md:h-[560px]"
+          className="h-[520px] w-full object-cover md:h-[690px]"
           initial={{ opacity: 0, scale: 1.02 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.02 }}

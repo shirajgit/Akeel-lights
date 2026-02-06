@@ -28,14 +28,14 @@ type Img = {
 };
 
 const images: Img[] = [
-  { src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1600&q=80", title: "Outdoor Wedding Lights" },
-  { src: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1600&q=80", title: "Entrance Decoration" },
+  { src: "/akeel-lights04.jpeg", title: "Outdoor Wedding Lights" },
+  { src: "/akeel-hero.jpeg", title: "Entrance Decoration" },
   { src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80", title: "Event Stage Lighting" },
-  { src: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1600&q=80", title: "Festival Night Lighting" },
-  { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80", title: "Community Event Lights" },
+  { src: "/akeel-lights02.jpeg", title: "Festival Night Lighting" },
+  { src: "/akeel-lights01.jpeg", title: "Community Event Lights" },
   { src: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?auto=format&fit=crop&w=1600&q=80", title: "Building Facade Lighting" },
   { src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80", title: "Architectural Lighting" },
-  { src: "https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1600&q=80", title: "Concert & Event Setup" },
+  { src: "/akeel-lights05.jpg", title: "Concert & Event Setup" },
   { src: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=1600&q=80", title: "Mandap Night Lighting" },
   { src: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1600&q=80", title: "Decorative String Lights" },
 ];

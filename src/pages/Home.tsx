@@ -77,17 +77,17 @@ const faqs = [
 
 const heroSlides = [
   {
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80",
+    src: "/akeel-lights04.jpeg",
     subtitle: "Wedding Lighting • Stage • Mandap",
     title: "Premium Wedding Lighting & Decoration",
   },
   {
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80",
+    src: "/akeel-hero.jpeg",
     subtitle: "Big Events • Backup Included",
     title: "Large Scale Event Setup (Backup Ready)",
   },
   {
-    src: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=1600&q=80",
+    src: "/akeel-lights05.jpg",
     subtitle: "House / Building Elevation",
     title: "Elevation Lighting for Homes & Buildings",
   },

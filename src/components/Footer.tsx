@@ -138,14 +138,16 @@ export default function Footer() {
                 </div>
                 <div className="rounded-2xl border border-slate-200 bg-white p-4">
                   <p className="text-xs text-slate-500">Location</p>
-                  <p className="mt-1 font-semibold">Vijayapura, Karnataka</p>
+                  <p className="mt-1 font-semibold">Akeel Lights , <br />Shop.no:09 star Hall Complex , opp. Secab Unani Collage, Naubag Road Vijaypura, Karnataka
+
+</p>
                 </div>
               </div>
 
               {/* Social */}
               <div className="mt-4 flex flex-wrap gap-2">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/sadik_phaniband"
                   className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50"
                 >
                   Instagram
