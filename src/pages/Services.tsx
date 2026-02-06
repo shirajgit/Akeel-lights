@@ -16,40 +16,77 @@ const container = {
   show: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 };
  
-
 const services = [
   {
     title: "Wedding Lighting & Decoration",
     desc: "Mandap, stage, entrance, venue ambience, baraat route lighting.",
-    includes: ["Mandap + Stage lighting", "Entrance & pathway setup", "Warm ambience lighting", "Safe wiring & neat finish"],
+    includes: [
+      "Mandap & stage lighting",
+      "Entrance & pathway setup",
+      "Warm ambience lighting",
+      "Safe wiring & neat finish",
+    ],
     tag: "Most Popular",
   },
   {
     title: "House / Building Elevation Lighting",
     desc: "Outdoor elevation lighting, terrace and compound lighting.",
-    includes: ["Elevation outline lights", "Terrace / balcony lighting", "Outdoor string lights", "Festival-ready setup"],
+    includes: [
+      "Elevation outline lights",
+      "Terrace / balcony lighting",
+      "Outdoor string lights",
+      "Festival-ready setup",
+    ],
     tag: "Premium Look",
   },
   {
     title: "Stage / Mandap Decoration",
     desc: "Backdrop themes, floral + lighting combinations, custom designs.",
-    includes: ["Backdrop & theme setup", "Floral + lighting combo", "Custom color themes", "Photo-friendly design"],
+    includes: [
+      "Backdrop & theme setup",
+      "Floral + lighting combo",
+      "Custom color themes",
+      "Photo-friendly design",
+    ],
     tag: "Custom Theme",
   },
   {
     title: "Festival & Community Events",
-    desc: "Diwali/Eid/festival decor, society functions and public events.",
-    includes: ["Community event coverage", "Decor + lighting combo", "Quick installation", "Safe cable management"],
+    desc: "Diwali, Eid & festival decor for societies and public events.",
+    includes: [
+      "Community event coverage",
+      "Decor + lighting combo",
+      "Quick installation",
+      "Safe cable management",
+    ],
     tag: "Festival",
   },
   {
     title: "Large-Scale Events + Backup",
-    desc: "High-power lighting setups with backup arrangements.",
-    includes: ["High-power lights", "Backup arrangements", "Large venue coverage", "On-site support"],
+    desc: "High-power lighting setups for large venues and crowd-heavy events.",
+    includes: [
+      "High-power lighting systems",
+      "Large venue coverage",
+      "On-site technical support",
+      "Event-day monitoring",
+    ],
+    tag: "Big Events",
+  },
+  {
+    title: "Power Generator & Backup Support",
+    desc: "Reliable power backup to ensure uninterrupted lighting during events.",
+    includes: [
+      "Power generator availability",
+      "Suitable for weddings & big events",
+      "Backup during power cuts",
+      "Safe power distribution",
+    ],
     tag: "Backup Included",
     highlight: true,
   },
 ] as const;
+
+
 
 const packages = [
   {

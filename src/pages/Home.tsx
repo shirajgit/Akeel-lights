@@ -148,13 +148,15 @@ export default function Home() {
     <main className="bg-white text-slate-900">
       {/* HERO */}
       <section className="border-b border-slate-200 bg-gradient-to-b from-slate-50 to-white">
-        <div className="mx-auto max-w-6xl px-4 pt-14 pb-12">
-          <div className="relative">
+   
   <HeroSlider
     slides={heroSlides as never}
     interval={4500}
     className="border border-slate-200 bg-white p-2 shadow-sm"
   />
+     <div className="mx-auto max-w-6xl px-4  pb-12">
+          <div className="relative">
+
   <div className="pointer-events-none absolute -inset-4 -z-10 rounded-[32px] bg-gradient-to-r from-emerald-200/40 via-sky-200/40 to-fuchsia-200/40 blur-2xl" />
 </div>
 

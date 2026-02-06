@@ -143,7 +143,7 @@ Requirements: ${msg}`
                 <span className="text-slate-500">WhatsApp:</span> +91 99455 29167
               </p>
               <p>
-                <span className="text-slate-500">Address:</span> Vijayapura, Karnataka
+                <span className="text-slate-500">Address:</span> Shop.no:09 star Hall Complex , opp. Secab Unani Collage, Naubag Road  <span className="ml-1 lg:ml-15"> Vijaypura, Karnataka</span>
               </p>
             </motion.div>
 
@@ -151,10 +151,20 @@ Requirements: ${msg}`
               variants={itemUp}
               className="mt-6 overflow-hidden rounded-2xl border border-slate-200"
             >
-              {/* Replace iframe src with real Google Maps embed */}
-              <div className="h-64 grid place-items-center bg-slate-50 text-sm text-slate-500">
-                Add Google Map Embed Here
-              </div>
+               {/* MAP */}
+  <div className="relative mt-14 rounded-3xl overflow-hidden border border-white/10 bg-white/[0.02] backdrop-blur-xl">
+    {/* soft glow */}
+    <div className="pointer-events-none absolute inset-0 -z-10 bg-cyan-400/10 blur-[120px]" />
+
+    <iframe
+      title="Vizionexl Technologies, Vijayapura"
+      className="relative z-20 w-full h-[380px] md:h-[320px] lg:h-[350px]"
+      loading="lazy"
+      allowFullScreen
+      referrerPolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=16.8340384,75.7178378&z=17&output=embed"
+    />
+  </div>
             </motion.div>
 
             <motion.div variants={itemUp} className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4">

@@ -2,21 +2,33 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
+/* -----------------------------
+   Framer helpers (TS safe)
+------------------------------*/
 const itemUp: Variants = {
   hidden: { opacity: 0, y: 12 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" as const }, // ✅
+    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }, // ✅ TS safe
   },
 };
 
-
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 };
- 
+
+const owner = {
+  name: "Akeel Panibanda",
+  role: "Owner • Akeel Lights",
+  location: "Vijayapura (Bijapur), Karnataka",
+  bio:
+    "Akeel Panibanda is the founder of Akeel Lights. Based in Vijayapura, he leads the team for premium lighting & decoration setups for weddings, festivals, stage/mandap and large-scale events. The company also runs an offline shop in Vijayapura for quick booking and service support.",
+  photo: "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1200&q=80"
+
+};
+
 
 const values = [
   {
@@ -69,8 +81,8 @@ const steps = [
 ] as const;
 
 const stats = [
-  { label: "Years of Experience", value: "10+ (update)" },
-  { label: "Events Completed", value: "250+ (update)" },
+  { label: "Years of Experience", value: "20+ " },
+  { label: "Events Completed", value: "250+ " },
   { label: "Big-Event Backup", value: "Available" },
   { label: "Service Area", value: "Vijayapura + Nearby" },
 ] as const;
@@ -79,9 +91,15 @@ export default function About() {
   return (
     <main className="bg-white text-slate-900">
       {/* Top hero */}
-      <section className="border-b border-slate-200 bg-gradient-to-b from-slate-50 to-white">
+      <section className="relative border-b border-slate-200 bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-6xl px-4 py-12">
-          <motion.div variants={container} initial="hidden" animate="show" className="grid gap-10 md:grid-cols-2 items-center">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="grid gap-10 md:grid-cols-2 items-center"
+          >
+            {/* Left */}
             <div>
               <motion.p
                 variants={itemUp}
@@ -91,7 +109,10 @@ export default function About() {
                 About Akeel Lights
               </motion.p>
 
-              <motion.h1 variants={itemUp} className="mt-5 text-4xl font-extrabold leading-tight">
+              <motion.h1
+                variants={itemUp}
+                className="mt-5 text-4xl md:text-5xl font-extrabold leading-tight"
+              >
                 Trusted Lighting & Decoration Team in{" "}
                 <span className="bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
                   Vijayapura
@@ -111,6 +132,7 @@ export default function About() {
                 >
                   Contact Us
                 </Link>
+
                 <Link
                   to="/gallery"
                   className="rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
@@ -118,15 +140,30 @@ export default function About() {
                   View Our Work
                 </Link>
               </motion.div>
+
+              <motion.div variants={itemUp} className="mt-6 flex flex-wrap gap-2 text-xs text-slate-600">
+                {["Premium look", "Safe wiring", "Custom themes", "Backup support"].map((x) => (
+                  <span key={x} className="rounded-full border border-slate-200 bg-white px-3 py-1">
+                    {x}
+                  </span>
+                ))}
+              </motion.div>
             </div>
 
             {/* Stats card */}
             <motion.div variants={itemUp} className="relative">
               <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-                <h2 className="text-lg font-semibold">Quick Facts</h2>
-                <p className="mt-2 text-sm text-slate-600">
-                  Update these numbers with real values when client confirms.
-                </p>
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h2 className="text-lg font-semibold">Quick Facts</h2>
+                    <p className="mt-2 text-sm text-slate-600">
+                      Update these numbers with real values when client confirms.
+                    </p>
+                  </div>
+                  <div className="h-10 w-10 rounded-2xl border border-slate-200 bg-slate-50 grid place-items-center">
+                    ✨
+                  </div>
+                </div>
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
                   {stats.map((s) => (
@@ -150,6 +187,97 @@ export default function About() {
           </motion.div>
         </div>
       </section>
+      {/* OWNER */}
+<section className="mx-auto max-w-6xl px-4 py-14">
+  <div className="grid gap-8 md:grid-cols-2 items-center">
+    {/* Photo */}
+    <motion.div
+      variants={itemUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      className="relative"
+    >
+      <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+        <div className="aspect-[4/3] bg-slate-100">
+          <img
+            src={owner.photo}
+            alt={owner.name}
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div className="pointer-events-none absolute -inset-4 -z-10 rounded-[32px] bg-gradient-to-r from-emerald-200/40 via-sky-200/40 to-fuchsia-200/40 blur-2xl" />
+    </motion.div>
+
+    {/* Info */}
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <motion.p
+        variants={itemUp}
+        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600"
+      >
+        <span className="h-2 w-2 rounded-full bg-emerald-500" />
+        Founder / Owner
+      </motion.p>
+
+      <motion.h2 variants={itemUp} className="mt-4 text-3xl font-extrabold">
+        {owner.name}
+      </motion.h2>
+
+      <motion.p variants={itemUp} className="mt-2 text-sm font-semibold text-slate-700">
+        {owner.role}
+      </motion.p>
+
+      <motion.p variants={itemUp} className="mt-3 text-sm text-slate-600">
+        {owner.location}
+      </motion.p>
+
+      <motion.p variants={itemUp} className="mt-4 text-slate-600">
+        {owner.bio}
+      </motion.p>
+
+      {/* Quick facts */}
+      <motion.div variants={itemUp} className="mt-6 grid grid-cols-2 gap-3">
+        {[
+          ["Based in", "Vijayapura"],
+          ["Service", "Lighting & Decoration"],
+          ["Offline Shop", "Available in Vijayapura"],
+          ["Support", "Backup for big events"],
+        ].map(([k, v]) => (
+          <div key={k} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p className="text-xs text-slate-500">{k}</p>
+            <p className="mt-1 text-sm font-semibold text-slate-900">{v}</p>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* CTA */}
+      <motion.div variants={itemUp} className="mt-7 flex flex-wrap gap-3">
+        <a
+          href="https://wa.me/919945529167"
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+        >
+          WhatsApp Akeel
+        </a>
+        <Link
+          to="/contact"
+          className="rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+        >
+          Book a Setup
+        </Link>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Values */}
       <section className="mx-auto max-w-6xl px-4 py-14">
@@ -209,6 +337,8 @@ export default function About() {
               <motion.div
                 key={s.n}
                 variants={itemUp}
+                whileHover={{ y: -3 }}
+                transition={{ type: "spring", stiffness: 260, damping: 22 }}
                 className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
               >
                 <div className="flex items-start gap-4">

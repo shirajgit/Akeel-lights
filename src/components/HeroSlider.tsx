@@ -9,7 +9,7 @@ type Slide = {
 
 export default function HeroSlider({
   slides,
-  interval = 4500,
+  interval = 5000,
   className = "",
 }: {
   slides: Slide[];
