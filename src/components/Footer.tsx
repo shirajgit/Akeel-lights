@@ -39,13 +39,13 @@ export default function Footer() {
             {/* Brand */}
             <div className="md:col-span-1">
               <div className="flex items-center gap-3">
-                <div className="h-12 w-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                
                   <img
                     src="/akeel lights.jpeg"
                     alt="Akeel Lights"
-                    className="h-full w-full object-cover"
+                    className="  w-15  object-cover"
                   />
-                </div>
+ 
                 <div className="leading-tight">
                   <p className="text-xs tracking-wide text-slate-500">AKEEL LIGHTS</p>
                   <p className="text-base font-semibold text-slate-900">

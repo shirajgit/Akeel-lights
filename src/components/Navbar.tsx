@@ -27,15 +27,15 @@ export default function Navbar() {
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center gap-3">
-          <div className="h-11 w-11 rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm">
+           
             <img
-              src="/akeel lights.jpeg"
+              src="/logo.png"
               alt="Akeel Lights"
-              className="h-full w-full object-cover"
+              className="  w-15 object-cover"
             />
-          </div>
+         
           <div className="leading-tight">
-            <p className="text-xs tracking-wide text-slate-500">AKEEL LIGHTS</p>
+            <p className="text-xs tracking-wide text-slate-600">AKEEL LIGHTS</p>
             <p className="text-base font-semibold text-slate-900">
               Lighting & Decoration
             </p>
